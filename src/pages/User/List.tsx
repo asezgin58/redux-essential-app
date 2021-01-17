@@ -4,14 +4,13 @@ import {useHistory} from "react-router-dom";
 import useAxios from "axios-hooks";
 import {useDispatch, useSelector} from "react-redux";
 import {actions} from "../../_store";
-import {IDispatch, IStore, IUser} from "../../_store/type";
 
 /**
  * Component File Description
  */
 const List: FC<any> = () => {
     const {push} = useHistory();
-    const dispatch: IDispatch = useDispatch();
+    const dispatch: IDispatch = useDispatch<IDispatch>();
     const users: IUser[] = useSelector<IStore, IUser[]>((store: IStore) => store.users);
 
     const [, usersRequest] = useAxios({

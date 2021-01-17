@@ -3,7 +3,6 @@ import {Button, TextField} from "@material-ui/core";
 import {useHistory} from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
 import {actions} from "../../_store";
-import {IAuthor, IDispatch, IStore} from "../../_store/type";
 
 /**
  * Component File Description

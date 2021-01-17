@@ -1,6 +1,5 @@
 import {FC} from "react";
 import {useSelector} from 'react-redux';
-import {IAuthor, IStore} from "../../_store/type";
 
 /**
  * Component File Description
