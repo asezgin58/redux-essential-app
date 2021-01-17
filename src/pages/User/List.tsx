@@ -2,9 +2,9 @@ import {FC, useEffect} from 'react';
 import {Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow} from "@material-ui/core";
 import {useHistory} from "react-router-dom";
 import useAxios from "axios-hooks";
-import {deleteStoreUser, setStoreUsers} from "../../_store/_actions";
 import {useDispatch, useSelector} from "react-redux";
-import {IDispatch, IStore, IUser} from "../../_store";
+import {actions} from "../../_store";
+import {IDispatch, IStore, IUser} from "../../_store/type";
 
 /**
  * Component File Description
@@ -22,7 +22,7 @@ const List: FC<any> = () => {
     const getUser = async () => {
         const {data, status} = await usersRequest();
         if (status === 200) {
-            dispatch(setStoreUsers(data?.data));
+            dispatch(actions.setStoreUsers(data?.data));
         }
     };
 
@@ -70,7 +70,7 @@ const List: FC<any> = () => {
                                             <Button
                                                 variant="contained"
                                                 color="secondary"
-                                                onClick={() => dispatch(deleteStoreUser(item.id))}
+                                                onClick={() => dispatch(actions.deleteStoreUser(item.id))}
                                             >Delete</Button>
                                         </TableCell>
                                     </TableRow>

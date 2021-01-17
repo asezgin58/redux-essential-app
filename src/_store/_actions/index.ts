@@ -1,7 +1,7 @@
 import {setStoreAuthor} from './author';
 import {setStoreUsers, deleteStoreUser} from './user';
 
-export {
+export default {
     setStoreAuthor,
     setStoreUsers,
     deleteStoreUser

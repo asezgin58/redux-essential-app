@@ -2,8 +2,8 @@ import {FC, useState} from 'react';
 import {Button, TextField} from "@material-ui/core";
 import {useHistory} from "react-router-dom";
 import {useSelector, useDispatch} from "react-redux";
-import {IAuthor, IDispatch, IStore} from "../../_store";
-import {setStoreAuthor} from "../../_store/_actions";
+import {actions} from "../../_store";
+import {IAuthor, IDispatch, IStore} from "../../_store/type";
 
 /**
  * Component File Description
@@ -22,7 +22,7 @@ const Edit: FC<any> = () => {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        dispatch(setStoreAuthor(author));
+        dispatch(actions.setStoreAuthor(author));
         push('/author');
     };
 

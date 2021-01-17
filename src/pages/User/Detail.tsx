@@ -2,7 +2,7 @@ import {FC} from "react";
 import {Button} from "@material-ui/core";
 import {useHistory, useParams} from "react-router-dom";
 import {useSelector} from "react-redux";
-import {IStore, IUser} from "../../_store";
+import {IStore, IUser} from "../../_store/type";
 
 /**
  * Component File Description
