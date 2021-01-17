@@ -3,16 +3,16 @@ import {Button, Paper, Table, TableBody, TableCell, TableContainer, TableHead, T
 import {useHistory} from "react-router-dom";
 import useAxios from "axios-hooks";
 import {deleteStoreUser, setStoreUsers} from "../../_store/_actions";
-import {IUser} from "../../_store/_reducers";
 import {useDispatch, useSelector} from "react-redux";
+import {IDispatch, IStore, IUser} from "../../_store";
 
 /**
  * Component File Description
  */
 const List: FC<any> = () => {
     const {push} = useHistory();
-    const dispatch = useDispatch();
-    const users: IUser[] = useSelector((store: any) => store.users);
+    const dispatch: IDispatch = useDispatch();
+    const users: IUser[] = useSelector((store: IStore) => store.users);
 
     const [, usersRequest] = useAxios({
         url: 'https://reqres.in/api/users?per_page=12',

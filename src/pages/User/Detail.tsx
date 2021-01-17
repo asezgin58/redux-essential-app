@@ -1,8 +1,8 @@
 import {FC} from "react";
 import {Button} from "@material-ui/core";
 import {useHistory, useParams} from "react-router-dom";
-import {IUser} from "../../_store/_reducers";
 import {useSelector} from "react-redux";
+import {IStore, IUser} from "../../_store";
 
 /**
  * Component File Description
@@ -10,8 +10,7 @@ import {useSelector} from "react-redux";
 const Detail: FC<any> = () => {
     const {push}: any = useHistory();
     const {id}: any = useParams();
-    const users: IUser[] = useSelector((store: any) => store.users);
-    const user: IUser = users.filter((item: IUser) => item.id === parseInt(id))[0];
+    const user: IUser = useSelector(({users}: IStore) => users.filter((item: IUser) => item.id === parseInt(id))[0]);
 
     return (
         <>

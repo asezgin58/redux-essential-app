@@ -1,12 +1,12 @@
 import {FC} from "react";
 import {useSelector} from 'react-redux';
-import {IAuthor} from "../../_store/_reducers";
+import {IAuthor, IStore} from "../../_store";
 
 /**
  * Component File Description
  */
 const Home: FC<any> = () => {
-    const author: IAuthor = useSelector((store: any) => store.author);
+    const author: IAuthor = useSelector((store: IStore) => store.author);
 
     return (
         <>

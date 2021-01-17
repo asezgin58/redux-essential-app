@@ -1,18 +1,17 @@
 import {FC, useState} from 'react';
 import {Button, TextField} from "@material-ui/core";
 import {useHistory} from "react-router-dom";
-import {setStoreAuthor} from "../../_store/_actions";
-import {IAuthor} from "../../_store/_reducers";
 import {useSelector, useDispatch} from "react-redux";
+import {IAuthor, IDispatch, IStore} from "../../_store";
+import {setStoreAuthor} from "../../_store/_actions";
 
 /**
  * Component File Description
  */
 const Edit: FC<any> = () => {
     const {push, goBack} = useHistory();
-    const dispatch = useDispatch();
-    const storeAuthor: IAuthor = useSelector((store: any) => store.author);
-    const [author, setAuthor] = useState<IAuthor>(storeAuthor);
+    const dispatch: IDispatch = useDispatch();
+    const [author, setAuthor] = useState<IAuthor>(useSelector((store: IStore) => store.author));
 
     const handleChange = (e: any) => {
         setAuthor({

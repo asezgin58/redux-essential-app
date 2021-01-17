@@ -1,15 +1,15 @@
 import {FC} from "react";
 import {Button} from "@material-ui/core";
 import {useHistory} from "react-router-dom";
-import {IAuthor} from "../../_store/_reducers";
 import {useSelector} from "react-redux";
+import {IAuthor, IStore} from "../../_store";
 
 /**
  * Component File Description
  */
 const Detail: FC<any> = () => {
     const {push} = useHistory();
-    const author: IAuthor = useSelector((store: any) => store.author);
+    const author: IAuthor = useSelector((store: IStore) => store.author);
 
     return (
         <>
