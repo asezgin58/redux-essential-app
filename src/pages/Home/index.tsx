@@ -6,7 +6,7 @@ import {IAuthor, IStore} from "../../_store";
  * Component File Description
  */
 const Home: FC<any> = () => {
-    const author: IAuthor = useSelector((store: IStore) => store.author);
+    const author: IAuthor = useSelector<IStore, IAuthor>((store: IStore) => store.author);
 
     return (
         <>

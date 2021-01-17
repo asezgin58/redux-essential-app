@@ -10,8 +10,8 @@ import {setStoreAuthor} from "../../_store/_actions";
  */
 const Edit: FC<any> = () => {
     const {push, goBack} = useHistory();
-    const dispatch: IDispatch = useDispatch();
-    const [author, setAuthor] = useState<IAuthor>(useSelector((store: IStore) => store.author));
+    const dispatch: IDispatch = useDispatch<IDispatch>();
+    const [author, setAuthor] = useState<IAuthor>(useSelector<IStore, IAuthor>((store: IStore) => store.author));
 
     const handleChange = (e: any) => {
         setAuthor({

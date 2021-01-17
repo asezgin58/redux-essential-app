@@ -10,7 +10,7 @@ import {IStore, IUser} from "../../_store";
 const Detail: FC<any> = () => {
     const {push}: any = useHistory();
     const {id}: any = useParams();
-    const user: IUser = useSelector(({users}: IStore) => users.filter((item: IUser) => item.id === parseInt(id))[0]);
+    const user: IUser = useSelector<IStore, IUser>(({users}: IStore) => users.filter((item: IUser) => item.id === parseInt(id))[0]);
 
     return (
         <>

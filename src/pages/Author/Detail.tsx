@@ -9,7 +9,7 @@ import {IAuthor, IStore} from "../../_store";
  */
 const Detail: FC<any> = () => {
     const {push} = useHistory();
-    const author: IAuthor = useSelector((store: IStore) => store.author);
+    const author: IAuthor = useSelector<IStore, IAuthor>((store: IStore) => store.author);
 
     return (
         <>

@@ -12,7 +12,7 @@ import {IDispatch, IStore, IUser} from "../../_store";
 const List: FC<any> = () => {
     const {push} = useHistory();
     const dispatch: IDispatch = useDispatch();
-    const users: IUser[] = useSelector((store: IStore) => store.users);
+    const users: IUser[] = useSelector<IStore, IUser[]>((store: IStore) => store.users);
 
     const [, usersRequest] = useAxios({
         url: 'https://reqres.in/api/users?per_page=12',
