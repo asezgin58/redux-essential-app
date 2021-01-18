@@ -1,7 +1,11 @@
 import authorReducer from './author';
 import userReducer from './user';
+import sagaExampleReducer from './sagaExample';
 
-export default {
+const reducers = {
     author: authorReducer,
-    users: userReducer
-}
+    users: userReducer,
+    sagaExample: sagaExampleReducer
+};
+
+export default reducers;

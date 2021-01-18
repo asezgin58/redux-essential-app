@@ -1,8 +1,12 @@
 import {setStoreAuthor} from './author';
 import {setStoreUsers, deleteStoreUser} from './user';
+import {setStoreSagaExample} from './sagaExample';
 
-export default {
+const actions = {
     setStoreAuthor,
     setStoreUsers,
-    deleteStoreUser
-}
+    deleteStoreUser,
+    setStoreSagaExample
+};
+
+export default actions;

@@ -14,6 +14,7 @@ const Sidebar: FC<ISidebarProps> = () => {
         {title: 'Home', link: '/'},
         {title: 'User', link: '/user'},
         {title: 'Author', link: '/author'},
+        {title: 'Saga Example', link: '/saga-example'},
     ];
 
     return (
