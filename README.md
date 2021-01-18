@@ -2,7 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project was used with Redux for state management.
+This project was used with [Redux](https://redux.js.org/) for state management.
+
+The project includes an example of [Redux-Saga](https://redux-saga.js.org/) usage.
 
 ## Available Scripts
 
